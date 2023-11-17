@@ -1,0 +1,118 @@
+						/*DATATYPES*/
+/*INT - whole intergers only e.g 10 */
+/*DECIMAL() - holds floats and doubles it takes two arguments e.g(5,2) 5 max number of digits and 2 is the precision(numer of decimal) e.g '99.34'*/
+/*VARCHAR() - it takes series of characters & the length must be specified in the () e.g 'Nelson'* /
+/*DATE - for working with dates*/
+/*DATETIME - for working with both date and time*/
+
+					
+
+
+
+					/*CREATING DATABASE*/
+/*CREATE database <database_name> - this is creating a databasee*/
+/*DROP DATABASE <database_name> - this is deleting a specific database*/
+/*ALTER DATABASE <database_name> READ ONLY = 0(false); - (1/0) to set a database to read only mode*/
+
+
+
+
+					/*CREATING TABLE*/
+/*CREATE TABLE <table_name> - creates a table on the clicked/selected database*/
+/*CREATE TABLE <table_name>(
+
+				<column_name> <data_type>,
+				<column_name> <data_type>,
+				<column_name> <data_type>,
+				<column_name> <data_type>,
+
+				....... and so on
+		); - creating a table && its column names*/
+/*DROP TABLE <table_name>; - deleting a table*/
+/*SELECT * FROM <table_name>; - selects everything(columns and all its content)*/
+/*RENAME TABLE <current table name> TO <new_table_name>; - renaming a table*/
+
+
+
+
+					/*MODIFYING WITH COLUMNS*/
+/*ALTER TABLE <table_name> ADD <column_name> <data_type>; - adds a new column on a specific table*/
+/*ALTER TABLE <table_name> DROP COLUMN <column_email> - deleting a column*/
+/*ALTER TABLE <table_name> RENAME COLUMN <current_column_name> TO <new_column_name>; - renames current column name and gives it a new  name*/
+/*ALTER TABLE <table_name> MODIFY COLUMN <column_name> <data_type> - modifying a column  e.g. email VARCHAR(100)*/
+					/*POSITIONING COLUMNS*/
+/*ALTER TABLE <table_name> MODIFY <column_name> <data_type> AFTER <column_name>* - positioning a column after another column*/
+/*ALTER TABLE <table_name> MODIFY <column_name> FIRST - positioning a column as the first column */
+
+
+
+
+
+					/*INSERTING ROWS INTO A TABLE*/
+/*INSERT INTO <table_name> VALUES (<int>, "<varchar>", <...and so on inserting approprriate values>),/*1st row*/
+				  (<int>, "<varchar>"),/*2st row*/
+				  (<int>, "<varchar>"),/*3st row*/* - this inserts multiple rows all at once in a database remove he lat two if you want to nsert only the first row* /
+/*INSERT INTO <table_name>(<col_name>, <col_name>,...) VALUES (<data_type>, <data_type>, ...); - This only filles the specified columns (inserts data but ommits certain properties)*/
+
+
+
+
+					/*SELECTING COLUMN FROM TABLE*/
+/*SELECT * FROM <table_name>; - this selects and returns every column and all their data on a specific table*/
+/*SELECT <col_name>, <col_name>, ... FROM <table_name> - this only selects and returns the columns specified and all their data*/
+/*SELECT * FROM <table_name> WHERE <col_name> <expression> this returns the all columns and for the specific column name specified expression e.g. first_name = "Nelson", houly_pay >= 15*/
+
+
+
+
+					/*UPDATING && DELETING DATA FROM TABLE ROW*/
+/*UPDATE <> table_name* SET <col_name> <new_value>; - This will update everything in the specified column with the new value */
+/*UPDATE <table_name> SET <col_name> <new_value>, <col_name> <new_value>, ... WHERE <col_name> = <value_in_table>; - this updates value of the specified row*/
+/*DELETE FROM <table_name> - this deletes all rows in our table*/
+/*DELETE FROM <table_name> WHERE <col_name> = <value> - this deletes row of the specified value e.g id=6*/
+
+
+
+
+
+					/*AUTOCOMMIT, COMMIT && ROLLBACK*/
+
+/*SET AUTOCOMMIT = OFF; - This creates a safe point(checkpoint)*/ => 
+/*COMMIT; - excecutes the safe point(checkpoint)*/  =>
+/*ROLLBACK; -goes to the previous safe point(checkpoint) */
+
+
+
+
+						/*DATE METHODS*/
+CURRENT_DATE() - creates current date datatype -DATE
+CUTTENT_TIME() - creates current time datatype -TIME
+NOW() -  creates current date & time datatype -DATETIME
+
+
+
+								/*CONSTRAINTS*/
+						/*UNIQUE CONSTRAINT*/
+/*ALTER TABLE <table_name> ADD CONSTRAINT UNIQUE(<col_name>) - adds a constraint for uniqueness incase one forgot to add when creating */
+/*CREATE TABLE <table_name>(
+	product_name UNIQUE,
+);**/
+						/*NOT NULL COSTRAINT*/
+/*ALTER TABLE <table_name> MODIFY <col_name> <data type> NOT NULL; - it's useful to verify input*/
+ /*CREATE TABLE <table_name>(
+	product_name NOT NULL,
+);**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
